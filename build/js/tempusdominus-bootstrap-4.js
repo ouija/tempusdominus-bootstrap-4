@@ -666,7 +666,6 @@ var DateTimePicker = function ($, moment) {
                 allModifiersPressed = void 0;
             var pressedKeys = [],
                 pressedModifiers = {},
-                keyState = {},
                 currentKey = e.which,
                 pressed = 'p';
 
@@ -704,6 +703,7 @@ var DateTimePicker = function ($, moment) {
                 if (handler.call(this)) {
                     e.stopPropagation();
                     e.preventDefault();
+                    this._keyup(e);
                 }
             }
         };
