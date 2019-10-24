@@ -13,6 +13,8 @@ Changelog:
 
 * Added [fix](https://github.com/ouija/tempusdominus-bootstrap-4/commit/623218e0a4318ea328a8ba764e1d76f30ecea558) for [Issue #193](https://github.com/tempusdominus/bootstrap-4/issues/193) *(Cannot read property '_options' of undefined)*
 
+* Added [fix](https://github.com/ouija/tempusdominus-bootstrap-4/commit/ad5d26c88b404ad438c26eb6c5e2fbae2907b869) for [Issue #227](https://github.com/tempusdominus/bootstrap-4/issues/227) / [#95](https://github.com/tempusdominus/bootstrap-4/issues/95) / [#92](https://github.com/tempusdominus/bootstrap-4/issues/92) / [#42](https://github.com/tempusdominus/bootstrap-4/issues/42) *(fix events)*
+
 # Version 5
 This is the Bootstrap 4 component of the new Version 5. This is a "scorched earth" version and there are **a lot** of breaking changes.
 
