@@ -2763,6 +2763,9 @@ var TempusDominusBootstrap4 = function ($) {
         if ($target.length === 0) {
             return;
         }
+        if (typeof config == "undefined" || config == null) {
+            return;
+        }
         if (!config._options.allowInputToggle) {
             return;
         }
