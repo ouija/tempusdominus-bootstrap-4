@@ -1,5 +1,11 @@
-# Tempus Dominus Bootstrap 4
+# Tempus Dominus Bootstrap 4 (ouija mod)
 ![GitHub version](https://badge.fury.io/gh/tempusdominus%2Fbootstrap-3-datetimepicker.png)
+
+# Ouija Mod Notes
+This fork contains bugfixes and patches that haven't yet been merged into the [original reprository](https://github.com/tempusdominus/bootstrap-4) as of commit #540bfae (Oct 6, 2018), since the project appears to have possibly been abondoned.
+
+Changelog:
+* Merged in fix for [Issue #34](https://github.com/tempusdominus/bootstrap-4/issues/34) *(TypeError: Cannot read property 'isSame' of undefined error)*
 
 # Version 5
 This is the Bootstrap 4 component of the new Version 5. This is a "scorched earth" version and there are **a lot** of breaking changes.
