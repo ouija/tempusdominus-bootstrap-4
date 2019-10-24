@@ -11,6 +11,8 @@ Changelog:
 
 * Added [fix](https://github.com/ouija/tempusdominus-bootstrap-4/commit/623218e0a4318ea328a8ba764e1d76f30ecea558) for [Issue #139](https://github.com/tempusdominus/bootstrap-4/issues/139) *(allowInputToggle onclick toggle conflict)*
 
+* Added [fix](https://github.com/ouija/tempusdominus-bootstrap-4/commit/623218e0a4318ea328a8ba764e1d76f30ecea558) for [Issue #193](https://github.com/tempusdominus/bootstrap-4/issues/193) *(Cannot read property '_options' of undefined)*
+
 # Version 5
 This is the Bootstrap 4 component of the new Version 5. This is a "scorched earth" version and there are **a lot** of breaking changes.
 
