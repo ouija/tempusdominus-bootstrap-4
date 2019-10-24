@@ -5,9 +5,11 @@
 This fork contains bugfixes and patches that haven't yet been merged into the [original reprository](https://github.com/tempusdominus/bootstrap-4) as of commit [#540bfae](https://github.com/tempusdominus/bootstrap-4/commit/540bfae18ca662bacfbea610e0ab8dcce6dd699e) (Oct 6, 2018), since the project appears to have possibly been abondoned.  It also offers improved accessibility support.
 
 Changelog:
-* Merged in [fix](https://github.com/ouija/tempusdominus-bootstrap-4/commit/58ddddaa1c7d7534af21f4fbc42180d48179d568) for [Issue #34](https://github.com/tempusdominus/bootstrap-4/issues/34) *(TypeError: Cannot read property 'isSame' of undefined error)*
+* Added [fix](https://github.com/ouija/tempusdominus-bootstrap-4/commit/58ddddaa1c7d7534af21f4fbc42180d48179d568) for [Issue #34](https://github.com/tempusdominus/bootstrap-4/issues/34) *(TypeError: Cannot read property 'isSame' of undefined error)*
 
-* Merged in [fix](https://github.com/ouija/tempusdominus-bootstrap-4/commit/d318c59ce191b9d09c71fc809e990afce17ec335) for [Issue #287](https://github.com/tempusdominus/bootstrap-4/issues/287) / [#159](https://github.com/tempusdominus/bootstrap-4/issues/159) *(Keybind events not working after date selection)*
+* Added [fix](https://github.com/ouija/tempusdominus-bootstrap-4/commit/d318c59ce191b9d09c71fc809e990afce17ec335) for [Issue #287](https://github.com/tempusdominus/bootstrap-4/issues/287) / [#159](https://github.com/tempusdominus/bootstrap-4/issues/159) *(Keybind events not working after date selection)*
+
+* Added [fix](https://github.com/ouija/tempusdominus-bootstrap-4/commit/623218e0a4318ea328a8ba764e1d76f30ecea558) for [Issue #139](https://github.com/tempusdominus/bootstrap-4/issues/139) *(allowInputToggle onclick toggle conflict)*
 
 # Version 5
 This is the Bootstrap 4 component of the new Version 5. This is a "scorched earth" version and there are **a lot** of breaking changes.
