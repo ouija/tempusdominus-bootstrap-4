@@ -2,12 +2,12 @@
 ![GitHub version](https://badge.fury.io/gh/tempusdominus%2Fbootstrap-3-datetimepicker.png)
 
 # 𝖔𝖚𝖎𝖏𝖆 𝖒𝖔𝖉𝖎𝖋𝖎𝖈𝖆𝖙𝖎𝖔𝖓𝖘
-This fork contains bugfixes and patches that haven't yet been merged into the [original reprository](https://github.com/tempusdominus/bootstrap-4) as of commit #540bfae (Oct 6, 2018), since the project appears to have possibly been abondoned.  It also offers imrpoved accessibility support.
+This fork contains bugfixes and patches that haven't yet been merged into the [original reprository](https://github.com/tempusdominus/bootstrap-4) as of commit [#540bfae](https://github.com/tempusdominus/bootstrap-4/commit/540bfae18ca662bacfbea610e0ab8dcce6dd699e) (Oct 6, 2018), since the project appears to have possibly been abondoned.  It also offers improved accessibility support.
 
 Changelog:
-* Merged in fix for [Issue #34](https://github.com/tempusdominus/bootstrap-4/issues/34) *(TypeError: Cannot read property 'isSame' of undefined error)*
+* Merged in [fix](https://github.com/ouija/tempusdominus-bootstrap-4/commit/58ddddaa1c7d7534af21f4fbc42180d48179d568) for [Issue #34](https://github.com/tempusdominus/bootstrap-4/issues/34) *(TypeError: Cannot read property 'isSame' of undefined error)*
 
-* Merged in fix for [Issue #287](https://github.com/tempusdominus/bootstrap-4/issues/287) *(Keybind events not working after date selection)*
+* Merged in [fix](https://github.com/ouija/tempusdominus-bootstrap-4/commit/3ad0dd7d4da749a5b1933bb9e4043a91a1514bc6) for [Issue #287](https://github.com/tempusdominus/bootstrap-4/issues/287) *(Keybind events not working after date selection)*
 
 # Version 5
 This is the Bootstrap 4 component of the new Version 5. This is a "scorched earth" version and there are **a lot** of breaking changes.
