@@ -7,7 +7,7 @@ This fork contains bugfixes and patches that haven't yet been merged into the [o
 Changelog:
 * Merged in [fix](https://github.com/ouija/tempusdominus-bootstrap-4/commit/58ddddaa1c7d7534af21f4fbc42180d48179d568) for [Issue #34](https://github.com/tempusdominus/bootstrap-4/issues/34) *(TypeError: Cannot read property 'isSame' of undefined error)*
 
-* Merged in [fix](https://github.com/ouija/tempusdominus-bootstrap-4/commit/3ad0dd7d4da749a5b1933bb9e4043a91a1514bc6) for [Issue #287](https://github.com/tempusdominus/bootstrap-4/issues/287) / [#159](https://github.com/tempusdominus/bootstrap-4/issues/159) *(Keybind events not working after date selection)*
+* Merged in [fix](https://github.com/ouija/tempusdominus-bootstrap-4/commit/d318c59ce191b9d09c71fc809e990afce17ec335) for [Issue #287](https://github.com/tempusdominus/bootstrap-4/issues/287) / [#159](https://github.com/tempusdominus/bootstrap-4/issues/159) *(Keybind events not working after date selection)*
 
 # Version 5
 This is the Bootstrap 4 component of the new Version 5. This is a "scorched earth" version and there are **a lot** of breaking changes.

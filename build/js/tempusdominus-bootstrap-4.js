@@ -2766,7 +2766,12 @@ var TempusDominusBootstrap4 = function ($) {
         if (!config._options.allowInputToggle) {
             return;
         }
-        TempusDominusBootstrap4._jQueryInterface.call($target, 'show', event);
+        setTimeout(function() { 
+            if (!$('.datepicker').is(':visible')) {
+                TempusDominusBootstrap4._jQueryInterface.call($target, 'show', event);
+            }
+        },100);
+        
     });
 
     $.fn[DateTimePicker.NAME] = TempusDominusBootstrap4._jQueryInterface;
