@@ -703,9 +703,9 @@ var DateTimePicker = function ($, moment) {
                 if (handler.call(this)) {
                     e.stopPropagation();
                     e.preventDefault();
-                    this._keyup(e);
                 }
             }
+            this._keyup(e);
         };
 
         //noinspection JSMethodCanBeStatic,SpellCheckingInspection
@@ -2773,7 +2773,7 @@ var TempusDominusBootstrap4 = function ($) {
             if (!$('.datepicker').is(':visible')) {
                 TempusDominusBootstrap4._jQueryInterface.call($target, 'show', event);
             }
-        },100);
+        },150);
         
     });
 
