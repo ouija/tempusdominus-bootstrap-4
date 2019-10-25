@@ -15,6 +15,8 @@ Changelog:
 
 * Added [fix](https://github.com/ouija/tempusdominus-bootstrap-4/commit/ad5d26c88b404ad438c26eb6c5e2fbae2907b869) for [Issue #227](https://github.com/tempusdominus/bootstrap-4/issues/227) / [#95](https://github.com/tempusdominus/bootstrap-4/issues/95) / [#92](https://github.com/tempusdominus/bootstrap-4/issues/92) / [#42](https://github.com/tempusdominus/bootstrap-4/issues/42) *(fix events)*
 
+* Improved default keyBind methods - Added shift+arrow keys support, backspace to clear, space to select, and more.
+
 # Version 5
 This is the Bootstrap 4 component of the new Version 5. This is a "scorched earth" version and there are **a lot** of breaking changes.
 
