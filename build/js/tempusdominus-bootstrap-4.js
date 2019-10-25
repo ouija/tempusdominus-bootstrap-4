@@ -472,7 +472,7 @@ var DateTimePicker = function ($, moment) {
                     } else if (this.widget.find('.datepicker-months').is(':visible')) {
                         this.widget.find('.datepicker:visible .datepicker-months').hide();
                         this.widget.find('.datepicker:visible .datepicker-days').show();
-                        this.widget.find('#datepicker-srAnnounce').text('Selected Month '+moment(d.clone()).format('YYYY')+', now select a day');
+                        this.widget.find('#datepicker-srAnnounce').text('Selected Month '+moment(d.clone()).format('MMMM')+', now select a day');
                     } else {
                         // default action
                         //this.hide();
