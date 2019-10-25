@@ -445,11 +445,11 @@ var DateTimePicker = function ($, moment) {
                     if (this.widget.find('.datepicker-years').is(':visible')) {
                         this.widget.find('.datepicker:visible .datepicker-years').hide();
                         this.widget.find('.datepicker:visible .datepicker-months').show();
-                        this.widget.find('#datepicker-srAnnounce').text('Selected Year '+moment(d.clone()).format('YYYY'));
+                        this.widget.find('#datepicker-srAnnounce').text('Selected Year '+moment(d.clone()).format('YYYY')+', now select a month');
                     } else if (this.widget.find('.datepicker-months').is(':visible')) {
                         this.widget.find('.datepicker:visible .datepicker-months').hide();
                         this.widget.find('.datepicker:visible .datepicker-days').show();
-                        this.widget.find('#datepicker-srAnnounce').text('Selected Month '+moment(d.clone()).format('YYYY'));
+                        this.widget.find('#datepicker-srAnnounce').text('Selected Month '+moment(d.clone()).format('YYYY')+', now select a day');
                     } else {
                         // default action
                         //this.hide();
@@ -459,23 +459,26 @@ var DateTimePicker = function ($, moment) {
                 return true;
             },
             space: function space() {
-                if (!this.widget) {
+                 if (!this.widget) {
                     return false;
                 }
+                var d = this._dates[0] || this.getMoment();
                 if (this.widget.find('.datepicker').is(':visible')) {
                     // override method to enter key to select year
                     if (this.widget.find('.datepicker-years').is(':visible')) {
                         this.widget.find('.datepicker:visible .datepicker-years').hide();
                         this.widget.find('.datepicker:visible .datepicker-months').show();
+                        this.widget.find('#datepicker-srAnnounce').text('Selected Year '+moment(d.clone()).format('YYYY')+', now select a month');
                     } else if (this.widget.find('.datepicker-months').is(':visible')) {
                         this.widget.find('.datepicker:visible .datepicker-months').hide();
                         this.widget.find('.datepicker:visible .datepicker-days').show();
+                        this.widget.find('#datepicker-srAnnounce').text('Selected Month '+moment(d.clone()).format('YYYY')+', now select a day');
                     } else {
                         // default action
-                        this.hide();
+                        //this.hide();
+                        this.widget.find('#datepicker-srAnnounce').text('Selected Date '+moment(d.clone()).format('MMMM Do, YYYY')).end().hide();
                     }
-                     this.widget.find('#datepicker-srAnnounce').text(moment(e.date).format('MMMM Do, YYYY'));
-                }
+                }                
                 return true;
             },
             escape: function escape() {
