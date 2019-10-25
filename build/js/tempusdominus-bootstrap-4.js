@@ -200,14 +200,17 @@ var DateTimePicker = function ($, moment) {
                     // override method to allow arrow keys to change year if .datepicker-years is visible
                     if (this.widget.find('.datepicker-years').is(':visible')) {
                         this.date(d.clone().add(1, 'y'));
+                        this.widget.find('#datepicker-srAnnounce').text(moment(d.clone().add(1, 'y')).format('YYYY'));
                     } 
                     // override method to allow arrow keys to change year if .datepicker-months is visible
                     else if (this.widget.find('.datepicker-months').is(':visible')) {
                         this.date(d.clone().add(1, 'M'));
+                        this.widget.find('#datepicker-srAnnounce').text(moment(d.clone().add(1, 'M')).format('MMMM'));
                     }
                     // else default action
                     else {
                         this.date(d.clone().subtract(7, 'd'));
+                        this.widget.find('#datepicker-srAnnounce').text(moment(d.clone().subtract(7, 'd')).format('MMMM Do, YYYY'));
                     }                            
                 } else this.date(d.clone().add(this.stepping(), 'm'));
                 return true;
@@ -222,15 +225,18 @@ var DateTimePicker = function ($, moment) {
                     // override method to allow arrow keys to change year if .datepicker-years is visible
                     if (this.widget.find('.datepicker-years').is(':visible')) {
                         this.date(d.clone().subtract(1, 'y'));
+                        this.widget.find('#datepicker-srAnnounce').text(moment(d.clone().subtract(1, 'y')).format('YYYY'));
                     }
                     // override method to allow arrow keys to change year if .datepicker-months is visible
                     else if (this.widget.find('.datepicker-months').is(':visible')) {
                         this.date(d.clone().subtract(1, 'M'))
+                        this.widget.find('#datepicker-srAnnounce').text(moment(d.clone().subtract(1, 'M')).format('MMMM'));
                     }
                     // else default action
                     else {
                         // default action
                         this.date(d.clone().add(7, 'd'));
+                        this.widget.find('#datepicker-srAnnounce').text(moment(d.clone().add(7, 'd')).format('MMMM Do, YYYY'));
                     }                            
                 } else this.date(d.clone().subtract(this.stepping(), 'm'));
                 return true;
@@ -242,6 +248,7 @@ var DateTimePicker = function ($, moment) {
                 var d = this._dates[0] || this.getMoment();
                 if (this.widget.find('.datepicker').is(':visible')) {
                     this.date(d.clone().subtract(10, 'y'));
+                    this.widget.find('#datepicker-srAnnounce').text(moment(d.clone().subtract(10, 'y')).format('YYYY'));
                 } else {
                     this.date(d.clone().add(1, 'h'));
                 }
@@ -254,6 +261,7 @@ var DateTimePicker = function ($, moment) {
                 var d = this._dates[0] || this.getMoment();
                 if (this.widget.find('.datepicker').is(':visible')) {
                     this.date(d.clone().add(10, 'y'));
+                    this.widget.find('#datepicker-srAnnounce').text(moment(d.clone().add(10, 'y')).format('YYYY'));
                 } else {
                     this.date(d.clone().subtract(1, 'h'));
                 }
@@ -266,6 +274,7 @@ var DateTimePicker = function ($, moment) {
                 var d = this._dates[0] || this.getMoment();
                 if (this.widget.find('.datepicker').is(':visible')) {
                     this.date(d.clone().subtract(10, 'y'));
+                    this.widget.find('#datepicker-srAnnounce').text(moment(d.clone().subtract(10, 'y')).format('YYYY'));
                 } else {
                     this.date(d.clone().add(1, 'h'));
                 }
@@ -278,6 +287,7 @@ var DateTimePicker = function ($, moment) {
                 var d = this._dates[0] || this.getMoment();
                 if (this.widget.find('.datepicker').is(':visible')) {
                     this.date(d.clone().add(10, 'y'));
+                    this.widget.find('#datepicker-srAnnounce').text(moment(d.clone().add(10, 'y')).format('YYYY'));
                 } else {
                     this.date(d.clone().subtract(1, 'h'));
                 }
@@ -292,14 +302,17 @@ var DateTimePicker = function ($, moment) {
                     // override method to allow arrow keys to change year if .datepicker-years is visible
                     if (this.widget.find('.datepicker-years').is(':visible')) {
                         this.date(d.clone().subtract(1, 'y'));
+                        this.widget.find('#datepicker-srAnnounce').text(moment(d.clone().subtract(1, 'y')).format('YYYY'));
                     }
                     // override method to allow arrow keys to change year if .datepicker-months is visible
                     else if (this.widget.find('.datepicker-months').is(':visible')) {
                         this.date(d.clone().subtract(1, 'M'));
+                        this.widget.find('#datepicker-srAnnounce').text(moment(d.clone().subtract(1, 'M')).format('MMMM'));
                     }
                     // else default action
                     else {
                         this.date(d.clone().subtract(1, 'd'));
+                        this.widget.find('#datepicker-srAnnounce').text(moment(d.clone().subtract(1, 'd')).format('MMMM Do, YYYY'));
                     }                            
                 }
                 return true;
@@ -313,14 +326,17 @@ var DateTimePicker = function ($, moment) {
                     // override method to allow arrow keys to change year if .datepicker-years is visible
                     if (this.widget.find('.datepicker-years').is(':visible')) {
                         this.date(d.clone().add(1, 'y'));
+                        this.widget.find('#datepicker-srAnnounce').text(moment(d.clone().add(1, 'y')).format('YYYY'));
                     }
                     // override method to allow arrow keys to change year if .datepicker-months is visible
                     else if (this.widget.find('.datepicker-months').is(':visible')) {
                         this.date(d.clone().add(1, 'M'));
+                        this.widget.find('#datepicker-srAnnounce').text(moment(d.clone().add(1, 'M')).format('MMMM'));
                     }
                     // else default action
                     else {
                         this.date(d.clone().add(1, 'd'));
+                        this.widget.find('#datepicker-srAnnounce').text(moment(d.clone().add(1, 'd')).format('MMMM Do, YYYY'));
                     }                            
                 }
                 return true;
@@ -333,8 +349,10 @@ var DateTimePicker = function ($, moment) {
                 if (this.widget.find('.datepicker').is(':visible')) {
                     if (this.widget.find('.datepicker-years').is(':visible')) {
                         this.date(d.clone().subtract(10, 'y'));
+                        this.widget.find('#datepicker-srAnnounce').text(moment(d.clone().subtract(10, 'y')).format('YYYY'));
                     } else {
                         this.date(d.clone().subtract(1, 'y'));
+                        this.widget.find('#datepicker-srAnnounce').text(moment(d.clone().subtract(1, 'y')).format('MMMM Do, YYYY'));
                     }
                 } else {
                     this.date(d.clone().add(1, 'h'));
@@ -349,8 +367,10 @@ var DateTimePicker = function ($, moment) {
                 if (this.widget.find('.datepicker').is(':visible')) {
                     if (this.widget.find('.datepicker-years').is(':visible')) {
                         this.date(d.clone().add(10, 'y'));
+                        this.widget.find('#datepicker-srAnnounce').text(moment(d.clone().add(10, 'y')).format('YYYY'));
                     } else {
                         this.date(d.clone().add(1, 'y'));
+                        this.widget.find('#datepicker-srAnnounce').text(moment(d.clone().add(1, 'y')).format('MMMM Do, YYYY'));
                     }
                 } else {
                     this.date(d.clone().subtract(1, 'h'));
@@ -365,8 +385,10 @@ var DateTimePicker = function ($, moment) {
                 if (this.widget.find('.datepicker').is(':visible')) {
                     if (this.widget.find('.datepicker-years').is(':visible')) {
                         this.date(d.clone().subtract(10, 'y'));
+                        this.widget.find('#datepicker-srAnnounce').text(moment(d.clone().subtract(10, 'y')).format('YYYY'));
                     } else {
                         this.date(d.clone().subtract(1, 'y'));
+                        this.widget.find('#datepicker-srAnnounce').text(moment(d.clone().subtract(1, 'y')).format('MMMM Do, YYYY'));
                     }
                 } else {
                     this.date(d.clone().add(1, 'h'));
@@ -381,8 +403,10 @@ var DateTimePicker = function ($, moment) {
                 if (this.widget.find('.datepicker').is(':visible')) {
                     if (this.widget.find('.datepicker-years').is(':visible')) {
                         this.date(d.clone().add(10, 'y'));
+                        this.widget.find('#datepicker-srAnnounce').text(moment(d.clone().add(10, 'y')).format('YYYY'));
                     } else {
                         this.date(d.clone().add(1, 'y'));
+                        this.widget.find('#datepicker-srAnnounce').text(moment(d.clone().add(1, 'y')).format('MMMM Do, YYYY'));
                     }
                 } else {
                     this.date(d.clone().subtract(1, 'h'));
@@ -396,6 +420,7 @@ var DateTimePicker = function ($, moment) {
                 var d = this._dates[0] || this.getMoment();
                 if (this.widget.find('.datepicker').is(':visible')) {
                     this.date(d.clone().subtract(1, 'M'));
+                    this.widget.find('#datepicker-srAnnounce').text(moment(d.clone().subtract(1, 'M')).format('MMMM'));
                 }
                 return true;
             },
@@ -406,6 +431,7 @@ var DateTimePicker = function ($, moment) {
                 var d = this._dates[0] || this.getMoment();
                 if (this.widget.find('.datepicker').is(':visible')) {
                     this.date(d.clone().add(1, 'M'));
+                    this.widget.find('#datepicker-srAnnounce').text(moment(d.clone().add(1, 'M')).format('MMMM'));
                 }
                 return true;
             },
@@ -413,19 +439,23 @@ var DateTimePicker = function ($, moment) {
                 if (!this.widget) {
                     return false;
                 }
+                var d = this._dates[0] || this.getMoment();
                 if (this.widget.find('.datepicker').is(':visible')) {
                     // override method to enter key to select year
                     if (this.widget.find('.datepicker-years').is(':visible')) {
                         this.widget.find('.datepicker:visible .datepicker-years').hide();
                         this.widget.find('.datepicker:visible .datepicker-months').show();
+                        this.widget.find('#datepicker-srAnnounce').text('Selected Year '+moment(d.clone()).format('YYYY'));
                     } else if (this.widget.find('.datepicker-months').is(':visible')) {
                         this.widget.find('.datepicker:visible .datepicker-months').hide();
                         this.widget.find('.datepicker:visible .datepicker-days').show();
+                        this.widget.find('#datepicker-srAnnounce').text('Selected Month '+moment(d.clone()).format('YYYY'));
                     } else {
                         // default action
-                        this.hide();
+                        //this.hide();
+                        this.widget.find('#datepicker-srAnnounce').text('Selected Date '+moment(d.clone()).format('MMMM Do, YYYY')).end().hide();
                     }
-                }
+                }                
                 return true;
             },
             space: function space() {
@@ -444,6 +474,7 @@ var DateTimePicker = function ($, moment) {
                         // default action
                         this.hide();
                     }
+                     this.widget.find('#datepicker-srAnnounce').text(moment(e.date).format('MMMM Do, YYYY'));
                 }
                 return true;
             },
@@ -659,12 +690,17 @@ var DateTimePicker = function ($, moment) {
         };
 
         DateTimePicker.prototype._change = function _change(e) {
+            e.stopImmediatePropagation();
+            return false;
+        };
+
+        /*DateTimePicker.prototype._change = function _change(e) {
             var val = $(e.target).val().trim(),
                 parsedDate = val ? this._parseInputDate(val) : null;
             this._setValue(parsedDate);
             e.stopImmediatePropagation();
             return false;
-        };
+        };*/
 
         //noinspection JSMethodCanBeStatic
 
@@ -736,6 +772,13 @@ var DateTimePicker = function ($, moment) {
                 return;
             }
             this._element.trigger(e);
+            
+            if (!this.widget) {
+                return;
+            }
+            if (this.widget.find('.datepicker').is(':visible') && this.widget.find('#datepicker-srAnnounce').length) {
+                //this.widget.find('#datepicker-srAnnounce').text(moment(e.date).format('MMMM Do, YYYY'));
+            }
         };
 
         DateTimePicker.prototype._viewUpdate = function _viewUpdate(e) {
@@ -875,6 +918,9 @@ var DateTimePicker = function ($, moment) {
                     this._keyup(e);
                 }
             }
+            //console.log($(e.target).val());
+            //val = $(e.target).val();
+            //$(e.target).val(' ');
         };
 
         //noinspection JSMethodCanBeStatic,SpellCheckingInspection
@@ -1956,7 +2002,8 @@ var TempusDominusBootstrap4 = function ($) {
                 dateView = $('<div>').addClass('datepicker').append(this._getDatePickerTemplate()),
                 timeView = $('<div>').addClass('timepicker').append(this._getTimePickerTemplate()),
                 content = $('<ul>').addClass('list-unstyled'),
-                toolbar = $('<li>').addClass('picker-switch' + (this._options.collapse ? ' accordion-toggle' : '')).append(this._getToolbar());
+                toolbar = $('<li>').addClass('picker-switch' + (this._options.collapse ? ' accordion-toggle' : '')).append(this._getToolbar()),
+                srAnnounce = $('<div>').attr({'id':'datepicker-srAnnounce','aria-live':'assertive'}).addClass('sr-only');
 
             if (this._options.inline) {
                 template.removeClass('dropdown-menu');
@@ -1996,7 +2043,9 @@ var TempusDominusBootstrap4 = function ($) {
             if (this._options.toolbarPlacement === 'bottom') {
                 content.append(toolbar);
             }
-            return template.append(content);
+            template.append(content);
+            template.append(srAnnounce);
+            return template;
         };
 
         TempusDominusBootstrap4.prototype._place = function _place(e) {
