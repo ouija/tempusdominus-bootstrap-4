@@ -445,15 +445,18 @@ var DateTimePicker = function ($, moment) {
                     if (this.widget.find('.datepicker-years').is(':visible')) {
                         this.widget.find('.datepicker:visible .datepicker-years').hide();
                         this.widget.find('.datepicker:visible .datepicker-months').show();
-                        this._element.prev('.datepicker-srAnnounce').html('You selected the year '+moment(d.clone()).format('YYYY')+', now select a month. Currently selected month is '+moment(d.clone()).format('MMMM'));
+                        if (this._options.locale == "fr") this._element.prev(".datepicker-srAnnounce").html("Vous avez sélectionné l'année "+moment(d.clone()).format("YYYY")+", sélectionnez maintenant un mois. Actuellement sélectionné mois est "+moment(d.clone()).format("MMMM"));
+                        else this._element.prev(".datepicker-srAnnounce").html("You selected the year "+moment(d.clone()).format("YYYY")+", now select a month. Currently selected month is "+moment(d.clone()).format("MMMM"));
                     } else if (this.widget.find('.datepicker-months').is(':visible')) {
                         this.widget.find('.datepicker:visible .datepicker-months').hide();
                         this.widget.find('.datepicker:visible .datepicker-days').show();
-                        this._element.prev('.datepicker-srAnnounce').html('You selected the month of'+moment(d.clone()).format('MMMM')+', now select a day. Currently selected day is the '+moment(d.clone()).format('Do'));
+                        if (this._options.locale == "fr") this._element.prev(".datepicker-srAnnounce").html("Vous avez sélectionné le mois de "+moment(d.clone()).format("MMMM")+", sélectionnez maintenant un jour. Actuellement choisi le jour est le "+moment(d.clone()).format("Do"));
+                        else this._element.prev(".datepicker-srAnnounce").html("You selected the month of "+moment(d.clone()).format("MMMM")+", now select a day. Currently selected day is the "+moment(d.clone()).format("Do"));
                     } else {
                         // default action
                         this.hide();
-                        this._element.prev('.datepicker-srAnnounce').html('Your fully selected date is '+moment(d.clone()).format('MMMM Do, YYYY'));
+                        if (this._options.locale == "fr") this._element.prev(".datepicker-srAnnounce").html("Votre date entièrement sélectionnée est le "+moment(d.clone()).format("MMMM Do, YYYY"));
+                        else this._element.prev(".datepicker-srAnnounce").html("Your fully selected date is "+moment(d.clone()).format("MMMM Do, YYYY"));
                     }
                 }                
                 return true;
@@ -468,15 +471,18 @@ var DateTimePicker = function ($, moment) {
                     if (this.widget.find('.datepicker-years').is(':visible')) {
                         this.widget.find('.datepicker:visible .datepicker-years').hide();
                         this.widget.find('.datepicker:visible .datepicker-months').show();
-                        this._element.prev('.datepicker-srAnnounce').html('You selected the year '+moment(d.clone()).format('YYYY')+', now select a month. Currently selected month is '+moment(d.clone()).format('MMMM'));
+                        if (this._options.locale == "fr") this._element.prev(".datepicker-srAnnounce").html("Vous avez sélectionné l'année "+moment(d.clone()).format("YYYY")+", sélectionnez maintenant un mois. Actuellement sélectionné mois est "+moment(d.clone()).format("MMMM"));
+                        else this._element.prev(".datepicker-srAnnounce").html("You selected the year "+moment(d.clone()).format("YYYY")+", now select a month. Currently selected month is "+moment(d.clone()).format("MMMM"));
                     } else if (this.widget.find('.datepicker-months').is(':visible')) {
                         this.widget.find('.datepicker:visible .datepicker-months').hide();
                         this.widget.find('.datepicker:visible .datepicker-days').show();
-                        this._element.prev('.datepicker-srAnnounce').html('You selected the month of '+moment(d.clone()).format('MMMM')+', now select a day. Currently selected day is the '+moment(d.clone()).format('Do'));
+                        if (this._options.locale == "fr") this._element.prev(".datepicker-srAnnounce").html("Vous avez sélectionné le mois de "+moment(d.clone()).format("MMMM")+", sélectionnez maintenant un jour. Actuellement choisi le jour est le "+moment(d.clone()).format("Do"));
+                        else this._element.prev(".datepicker-srAnnounce").html("You selected the month of "+moment(d.clone()).format("MMMM")+", now select a day. Currently selected day is the "+moment(d.clone()).format("Do"));
                     } else {
                         // default action
                         this.hide();
-                        this._element.prev('.datepicker-srAnnounce').html('Your fully selected date is '+moment(d.clone()).format('MMMM Do, YYYY'));
+                        if (this._options.locale == "fr") this._element.prev(".datepicker-srAnnounce").html("Votre date entièrement sélectionnée est le "+moment(d.clone()).format("MMMM Do, YYYY"));
+                        else this._element.prev(".datepicker-srAnnounce").html("Your fully selected date is "+moment(d.clone()).format("MMMM Do, YYYY"));
                     }
                 }                
                 return true;
@@ -613,8 +619,8 @@ var DateTimePicker = function ($, moment) {
                 if (!this._options.allowMultidate || this._dates.length === 1) {
                     this.unset = true;
                     this._dates = [];
-                    this._dates[0] = this.getMoment();
-                    this._viewDate = this.getMoment().locale(this._options.locale).clone();
+                    //this._dates[0] = this.getMoment();
+                    //this._viewDate = this.getMoment().locale(this._options.locale).clone();
                     this._datesFormatted = [];
                 } else {
                     outpValue = this._element.data('date') + ',';
