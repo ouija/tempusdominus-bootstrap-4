@@ -174,6 +174,7 @@ var DateTimePicker = function ($, moment) {
         daysOfWeekDisabled: false,
         calendarWeeks: false,
         viewMode: 'days',
+        viewModeReset: true,
         toolbarPlacement: 'default',
         buttons: {
             showToday: false,
@@ -619,8 +620,8 @@ var DateTimePicker = function ($, moment) {
                 if (!this._options.allowMultidate || this._dates.length === 1) {
                     this.unset = true;
                     this._dates = [];
-                    //this._dates[0] = this.getMoment();
-                    //this._viewDate = this.getMoment().locale(this._options.locale).clone();
+                    this._dates[0] = this.getMoment();
+                    this._viewDate = this.getMoment().locale(this._options.locale).clone();
                     this._datesFormatted = [];
                 } else {
                     outpValue = this._element.data('date') + ',';
@@ -805,6 +806,9 @@ var DateTimePicker = function ($, moment) {
         DateTimePicker.prototype._showMode = function _showMode(dir) {
             if (!this.widget) {
                 return;
+            }
+            if (this.currentViewMode == 0 && this._options.viewModeReset) {
+                this.currentViewMode = Math.max(DateTimePicker.ViewModes.indexOf(this._options.viewMode) - 1, this.MinViewModeNumber);
             }
             if (dir) {
                 this.currentViewMode = Math.max(this.MinViewModeNumber, Math.min(3, this.currentViewMode + dir));
