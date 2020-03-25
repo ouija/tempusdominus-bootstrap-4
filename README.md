@@ -2,7 +2,7 @@
 ![GitHub version](https://badge.fury.io/gh/tempusdominus%2Fbootstrap-3-datetimepicker.png)
 
 # 𝖔𝖚𝖎𝖏𝖆 𝖒𝖔𝖉𝖎𝖋𝖎𝖈𝖆𝖙𝖎𝖔𝖓𝖘
-This fork contains bugfixes and patches that haven't yet been merged into the [original reprository](https://github.com/tempusdominus/bootstrap-4) as of commit [#540bfae](https://github.com/tempusdominus/bootstrap-4/commit/540bfae18ca662bacfbea610e0ab8dcce6dd699e) (Oct 6, 2018), since the project appears to have possibly been abondoned.  It also offers improved accessibility support.
+This fork contains bugfixes and patches that haven't yet been merged into the [original reprository](https://github.com/tempusdominus/bootstrap-4) as of commit [#540bfae](https://github.com/tempusdominus/bootstrap-4/commit/540bfae18ca662bacfbea610e0ab8dcce6dd699e) (Oct 6, 2018), since the project appears to have possibly been abondoned.  It also offers [improved accessibility support](https://github.com/ouija/tempusdominus-bootstrap-4/tree/accessibility-fix).
 
 Changelog:
 * Added [fix](https://github.com/ouija/tempusdominus-bootstrap-4/commit/58ddddaa1c7d7534af21f4fbc42180d48179d568) for [Issue #34](https://github.com/tempusdominus/bootstrap-4/issues/34) *(TypeError: Cannot read property 'isSame' of undefined error)*
