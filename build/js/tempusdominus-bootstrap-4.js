@@ -1,6 +1,7 @@
 /*@preserve
- * Tempus Dominus Bootstrap4 v5.1.2 (https://tempusdominus.github.io/bootstrap-4/)
- * Copyright 2016-2018 Jonathan Peterson
+ * Tempus Dominus Bootstrap 4 (𝖔𝖚𝖎𝖏𝖆 𝖒𝖔𝖉) (https://github.com/ouija/tempusdominus-bootstrap-4)
+ * Copyright 2016-2018 Jonathan Peterson (https://tempusdominus.github.io/bootstrap-4/)
+ * Modified by @ouija, based on v5.1.3 as of commit #540bfae (Oct 6, 2018)
  * Licensed under MIT (https://github.com/tempusdominus/bootstrap-3/blob/master/LICENSE)
  */
 
