@@ -15,6 +15,8 @@ Changelog:
 
 * Added [fix](https://github.com/ouija/tempusdominus-bootstrap-4/commit/ad5d26c88b404ad438c26eb6c5e2fbae2907b869) for [Issue #227](https://github.com/tempusdominus/bootstrap-4/issues/227) / [#95](https://github.com/tempusdominus/bootstrap-4/issues/95) / [#92](https://github.com/tempusdominus/bootstrap-4/issues/92) / [#42](https://github.com/tempusdominus/bootstrap-4/issues/42) *(fix events)*
 
+* Added [fix](https://github.com/ouija/tempusdominus-bootstrap-4/pull/1/commits/fa08722ce63424060fde48eeb818fdf1345e7f49) for [Issue #167](https://github.com/tempusdominus/bootstrap-4/issues/167) *(removing window.resize event listener)*
+
 * Improved default keyBind methods - Added shift+arrow keys support, backspace to clear, space to select, and more.
 
 # Version 5
