@@ -2724,7 +2724,7 @@ var TempusDominusBootstrap4 = function ($) {
             }
             this.widget.hide();
 
-            $(window).off('resize', this._place());
+            $(window).off('resize', this._place);
             this.widget.off('click', '[data-action]');
             this.widget.off('mousedown', false);
 
