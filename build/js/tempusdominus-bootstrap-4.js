@@ -443,17 +443,38 @@ var DateTimePicker = function ($, moment) {
                 }
                 var d = this._dates[0] || this.getMoment();
                 if (this.widget.find('.datepicker').is(':visible')) {
-                    // override method to enter key to select year
+                    // override method of key to select year
                     if (this.widget.find('.datepicker-years').is(':visible')) {
                         this.widget.find('.datepicker:visible .datepicker-years').hide();
-                        this.widget.find('.datepicker:visible .datepicker-months').show();
-                        if (this._options.locale == "fr") this._element.prev(".datepicker-srAnnounce").html("Vous avez sélectionné l'année "+moment(d.clone()).format("YYYY")+", sélectionnez maintenant un mois. Actuellement sélectionné mois est "+moment(d.clone()).format("MMMM"));
-                        else this._element.prev(".datepicker-srAnnounce").html("You selected the year "+moment(d.clone()).format("YYYY")+", now select a month. Currently selected month is "+moment(d.clone()).format("MMMM"));
+                        // show month or day selector on keypress (if enabled based on format)
+                        if (this._isEnabled('M')) {
+                            this.widget.find('.datepicker:visible .datepicker-months').show();
+                            if (this._options.locale == "fr") this._element.prev(".datepicker-srAnnounce").html("Vous avez sélectionné l'année "+moment(d.clone()).format("YYYY")+", sélectionnez maintenant un mois. Actuellement sélectionné mois est "+moment(d.clone()).format("MMMM"));
+                            else this._element.prev(".datepicker-srAnnounce").html("You selected the year "+moment(d.clone()).format("YYYY")+", now select a month. Currently selected month is "+moment(d.clone()).format("MMMM"));
+                        }
+                        else if (this._isEnabled('d')) {
+                            this.widget.find('.datepicker:visible .datepicker-days').show();
+                            if (this._options.locale == "fr") this._element.prev(".datepicker-srAnnounce").html("Vous avez sélectionné l'année "+moment(d.clone()).format("YYYY")+", sélectionnez maintenant un mois. Actuellement sélectionné mois est "+moment(d.clone()).format("MMMM"));
+                            else this._element.prev(".datepicker-srAnnounce").html("You selected the year "+moment(d.clone()).format("YYYY")+", now select a day. Currently selected day is the "+moment(d.clone()).format("Do"));
+                        }
+                        else {
+                            this.hide();
+                            if (this._options.locale == "fr") this._element.prev(".datepicker-srAnnounce").html("Vous avez sélectionné l'année "+moment(d.clone()).format("YYYY"));
+                            else this._element.prev(".datepicker-srAnnounce").html("You selected the year "+moment(d.clone()).format("YYYY"));                            
+                        }
                     } else if (this.widget.find('.datepicker-months').is(':visible')) {
                         this.widget.find('.datepicker:visible .datepicker-months').hide();
-                        this.widget.find('.datepicker:visible .datepicker-days').show();
-                        if (this._options.locale == "fr") this._element.prev(".datepicker-srAnnounce").html("Vous avez sélectionné le mois de "+moment(d.clone()).format("MMMM")+", sélectionnez maintenant un jour. Actuellement choisi le jour est le "+moment(d.clone()).format("Do"));
-                        else this._element.prev(".datepicker-srAnnounce").html("You selected the month of "+moment(d.clone()).format("MMMM")+", now select a day. Currently selected day is the "+moment(d.clone()).format("Do"));
+                        // show day selector on keypress (if enabled based on format)
+                        if (this._isEnabled('d')) {
+                            if (this._options.locale == "fr") this._element.prev(".datepicker-srAnnounce").html("Vous avez sélectionné le mois de "+moment(d.clone()).format("MMMM")+", sélectionnez maintenant un jour. Actuellement choisi le jour est le "+moment(d.clone()).format("Do"));
+                            else this._element.prev(".datepicker-srAnnounce").html("You selected the month of "+moment(d.clone()).format("MMMM")+", now select a day. Currently selected day is the "+moment(d.clone()).format("Do"));
+                            this.widget.find('.datepicker:visible .datepicker-days').show();
+                        }
+                        else {
+                            this.hide();
+                            if (this._options.locale == "fr") this._element.prev(".datepicker-srAnnounce").html("Vous avez sélectionné le mois de "+moment(d.clone()).format("MMMM"));
+                            else this._element.prev(".datepicker-srAnnounce").html("You selected the month of "+moment(d.clone()).format("MMMM"));                            
+                        }
                     } else {
                         // default action
                         this.hide();
@@ -469,18 +490,38 @@ var DateTimePicker = function ($, moment) {
                 }
                 var d = this._dates[0] || this.getMoment();
                 if (this.widget.find('.datepicker').is(':visible')) {
-                    // override method to enter key to select year
+                    // override method of key to select year
                     if (this.widget.find('.datepicker-years').is(':visible')) {
                         this.widget.find('.datepicker:visible .datepicker-years').hide();
-                        this.widget.find('.datepicker:visible .datepicker-months').show();
-                        if (this._options.locale == "fr") this._element.prev(".datepicker-srAnnounce").html("Vous avez sélectionné l'année "+moment(d.clone()).format("YYYY")+", sélectionnez maintenant un mois. Actuellement sélectionné mois est "+moment(d.clone()).format("MMMM"));
-                        else this._element.prev(".datepicker-srAnnounce").html("You selected the year "+moment(d.clone()).format("YYYY")+", now select a month. Currently selected month is "+moment(d.clone()).format("MMMM"));
+                        // show month or day selector on keypress (if enabled based on format)
+                        if (this._isEnabled('M')) {
+                            this.widget.find('.datepicker:visible .datepicker-months').show();
+                            if (this._options.locale == "fr") this._element.prev(".datepicker-srAnnounce").html("Vous avez sélectionné l'année "+moment(d.clone()).format("YYYY")+", sélectionnez maintenant un mois. Actuellement sélectionné mois est "+moment(d.clone()).format("MMMM"));
+                            else this._element.prev(".datepicker-srAnnounce").html("You selected the year "+moment(d.clone()).format("YYYY")+", now select a month. Currently selected month is "+moment(d.clone()).format("MMMM"));
+                        }
+                        else if (this._isEnabled('d')) {
+                            this.widget.find('.datepicker:visible .datepicker-days').show();
+                            if (this._options.locale == "fr") this._element.prev(".datepicker-srAnnounce").html("Vous avez sélectionné l'année "+moment(d.clone()).format("YYYY")+", sélectionnez maintenant un mois. Actuellement sélectionné mois est "+moment(d.clone()).format("MMMM"));
+                            else this._element.prev(".datepicker-srAnnounce").html("You selected the year "+moment(d.clone()).format("YYYY")+", now select a day. Currently selected day is the "+moment(d.clone()).format("Do"));
+                        }
+                        else {
+                            this.hide();
+                            if (this._options.locale == "fr") this._element.prev(".datepicker-srAnnounce").html("Vous avez sélectionné l'année "+moment(d.clone()).format("YYYY"));
+                            else this._element.prev(".datepicker-srAnnounce").html("You selected the year "+moment(d.clone()).format("YYYY"));                            
+                        }
                     } else if (this.widget.find('.datepicker-months').is(':visible')) {
                         this.widget.find('.datepicker:visible .datepicker-months').hide();
-                        this.widget.find('.datepicker:visible .datepicker-days').show();
-                        if (this._options.locale == "fr") this._element.prev(".datepicker-srAnnounce").html("Vous avez sélectionné le mois de "+moment(d.clone()).format("MMMM")+", sélectionnez maintenant un jour. Actuellement choisi le jour est le "+moment(d.clone()).format("Do"));
-                        else this._element.prev(".datepicker-srAnnounce").html("You selected the month of "+moment(d.clone()).format("MMMM")+", now select a day. Currently selected day is the "+moment(d.clone()).format("Do"));
-                    } else {
+                        // show day selector on keypress (if enabled based on format)
+                        if (this._isEnabled('d')) {
+                            if (this._options.locale == "fr") this._element.prev(".datepicker-srAnnounce").html("Vous avez sélectionné le mois de "+moment(d.clone()).format("MMMM")+", sélectionnez maintenant un jour. Actuellement choisi le jour est le "+moment(d.clone()).format("Do"));
+                            else this._element.prev(".datepicker-srAnnounce").html("You selected the month of "+moment(d.clone()).format("MMMM")+", now select a day. Currently selected day is the "+moment(d.clone()).format("Do"));
+                            this.widget.find('.datepicker:visible .datepicker-days').show();
+                        }
+                        else {
+                            this.hide();
+                            if (this._options.locale == "fr") this._element.prev(".datepicker-srAnnounce").html("Vous avez sélectionné le mois de "+moment(d.clone()).format("MMMM"));
+                            else this._element.prev(".datepicker-srAnnounce").html("You selected the month of "+moment(d.clone()).format("MMMM"));                            
+                        }                    } else {
                         // default action
                         this.hide();
                         if (this._options.locale == "fr") this._element.prev(".datepicker-srAnnounce").html("Votre date entièrement sélectionnée est le "+moment(d.clone()).format("MMMM Do, YYYY"));
