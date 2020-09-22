@@ -415,13 +415,16 @@ var DateTimePicker = function ($, moment) {
                     return false;
                 }
                 if (this.widget.find('.datepicker').is(':visible')) {
-                    // override method to enter key to select year
+                    // override method for key to select year
                     if (this.widget.find('.datepicker-years').is(':visible')) {
                         this.widget.find('.datepicker:visible .datepicker-years').hide();
-                        this.widget.find('.datepicker:visible .datepicker-months').show();
+                        if (this._isEnabled('M')) this.widget.find('.datepicker:visible .datepicker-months').show();
+                        else if (this._isEnabled('d')) this.widget.find('.datepicker:visible .datepicker-days').show();
+                        else this.hide();
                     } else if (this.widget.find('.datepicker-months').is(':visible')) {
                         this.widget.find('.datepicker:visible .datepicker-months').hide();
-                        this.widget.find('.datepicker:visible .datepicker-days').show();
+                        if (this._isEnabled('d')) this.widget.find('.datepicker:visible .datepicker-days').show();
+                        else this.hide();
                     } else {
                         // default action
                         this.hide();
@@ -434,13 +437,16 @@ var DateTimePicker = function ($, moment) {
                     return false;
                 }
                 if (this.widget.find('.datepicker').is(':visible')) {
-                    // override method to enter key to select year
+                    // override method for key to select year
                     if (this.widget.find('.datepicker-years').is(':visible')) {
                         this.widget.find('.datepicker:visible .datepicker-years').hide();
-                        this.widget.find('.datepicker:visible .datepicker-months').show();
+                        if (this._isEnabled('M')) this.widget.find('.datepicker:visible .datepicker-months').show();
+                        else if (this._isEnabled('d')) this.widget.find('.datepicker:visible .datepicker-days').show();
+                        else this.hide();
                     } else if (this.widget.find('.datepicker-months').is(':visible')) {
                         this.widget.find('.datepicker:visible .datepicker-months').hide();
-                        this.widget.find('.datepicker:visible .datepicker-days').show();
+                        if (this._isEnabled('d')) this.widget.find('.datepicker:visible .datepicker-days').show();
+                        else this.hide();
                     } else {
                         // default action
                         this.hide();
