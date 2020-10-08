@@ -2684,7 +2684,7 @@ var TempusDominusBootstrap4 = function ($) {
                 this.input.blur();
             }
 
-            this._viewDate = this._getLastPickedDate().clone();
+            if (this.input.val() !== undefined && this.input.val().trim().length !== 0) this._viewDate = this._getLastPickedDate().clone();
         };
 
         TempusDominusBootstrap4.prototype.show = function show() {
