@@ -2,7 +2,11 @@
 ![GitHub version](https://badge.fury.io/gh/tempusdominus%2Fbootstrap-3-datetimepicker.png)
 
 # 𝖔𝖚𝖎𝖏𝖆 𝖒𝖔𝖉𝖎𝖋𝖎𝖈𝖆𝖙𝖎𝖔𝖓𝖘
-This fork contains bugfixes and patches that haven't yet been merged into the [original repository](https://github.com/tempusdominus/bootstrap-4) as of commit [#540bfae](https://github.com/tempusdominus/bootstrap-4/commit/540bfae18ca662bacfbea610e0ab8dcce6dd699e) (Oct 6, 2018), since the project appears to have possibly been abandoned.  [This branch](https://github.com/ouija/tempusdominus-bootstrap-4/tree/accessibility-fix) offers **even greater** accessibility support than the [main branch](https://github.com/ouija/tempusdominus-bootstrap-4/tree/master).
+This fork contains bugfixes and patches that haven't yet been merged into the [original repository](https://github.com/tempusdominus/bootstrap-4) as of commit [#540bfae](https://github.com/tempusdominus/bootstrap-4/commit/540bfae18ca662bacfbea610e0ab8dcce6dd699e) (Oct 6, 2018), since the project appears to have possibly been abandoned.
+
+  [This branch](https://github.com/ouija/tempusdominus-bootstrap-4/tree/accessibility-fix) offers **even greater** accessibility support than the [main branch](https://github.com/ouija/tempusdominus-bootstrap-4/tree/master).
+
+Use either the minified or non-minified versions of both the css and js files found under the [build](https://github.com/ouija/tempusdominus-bootstrap-4/tree/accessibility-fix/build) folder.
 
 Changelog:
 * Added [fix](https://github.com/ouija/tempusdominus-bootstrap-4/commit/58ddddaa1c7d7534af21f4fbc42180d48179d568) for [Issue #34](https://github.com/tempusdominus/bootstrap-4/issues/34) *(TypeError: Cannot read property 'isSame' of undefined error)*
