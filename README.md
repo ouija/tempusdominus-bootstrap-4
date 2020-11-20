@@ -4,6 +4,8 @@
 # 𝖔𝖚𝖎𝖏𝖆 𝖒𝖔𝖉𝖎𝖋𝖎𝖈𝖆𝖙𝖎𝖔𝖓𝖘
 This fork contains bugfixes and patches that haven't yet been merged into the [original repository](https://github.com/tempusdominus/bootstrap-4) as of commit [#540bfae](https://github.com/tempusdominus/bootstrap-4/commit/540bfae18ca662bacfbea610e0ab8dcce6dd699e) (Oct 6, 2018), since the project appears to have possibly been abandoned.
 
+Please consider [donating](https://paypal.me/djouija) to support this project. Thanks!
+
 For further improved accessibility support, use [this branch](https://github.com/ouija/tempusdominus-bootstrap-4/tree/accessibility-fix)
 
 Use either the minified or non-minified versions of both the css and js files found under the [build](https://github.com/ouija/tempusdominus-bootstrap-4/tree/master/build) folder.
