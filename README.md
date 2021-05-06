@@ -16,7 +16,7 @@ Changelog:
 
 * Added [fix](https://github.com/ouija/tempusdominus-bootstrap-4/commit/d318c59ce191b9d09c71fc809e990afce17ec335) for [Issue #287](https://github.com/tempusdominus/bootstrap-4/issues/287) / [#159](https://github.com/tempusdominus/bootstrap-4/issues/159) *(Keybind events not working after date selection)*
 
-* Added [fix](https://github.com/ouija/tempusdominus-bootstrap-4/commit/623218e0a4318ea328a8ba764e1d76f30ecea558) for [Issue #139](https://github.com/tempusdominus/bootstrap-4/issues/139) *(allowInputToggle onclick toggle conflict)*
+* Added [fix](https://github.com/ouija/tempusdominus-bootstrap-4/commit/623218e0a4318ea328a8ba764e1d76f30ecea558) for [Issue #139](https://github.com/tempusdominus/bootstrap-4/issues/139) / [Issue #88](https://github.com/tempusdominus/bootstrap-4/issues/80) *(allowInputToggle onclick toggle conflict)*
 
 * Added [fix](https://github.com/ouija/tempusdominus-bootstrap-4/commit/623218e0a4318ea328a8ba764e1d76f30ecea558) for [Issue #193](https://github.com/tempusdominus/bootstrap-4/issues/193) *(Cannot read property '_options' of undefined)*
 
@@ -25,6 +25,8 @@ Changelog:
 * Added [fix](https://github.com/ouija/tempusdominus-bootstrap-4/pull/1/commits/fa08722ce63424060fde48eeb818fdf1345e7f49) for [Issue #167](https://github.com/tempusdominus/bootstrap-4/issues/167) *(removing window.resize event listener)*
 
 * Added [fix](https://github.com/ouija/tempusdominus-bootstrap-4/commit/9215a556058fb45a9108d0264ce57c1f8a2201df) for [Issue #221](https://github.com/tempusdominus/bootstrap-4/issues/221) *(viewDate reset on hide when no selection is made)*
+
+* Added fix for *active class to be applied to current, singular decade (when viewing date by decade)*
 
 * Improved default keyBind methods - Added shift+arrow keys support, backspace to clear, space to select, and more.
 

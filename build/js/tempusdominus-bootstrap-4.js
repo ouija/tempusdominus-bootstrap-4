@@ -1774,7 +1774,11 @@ var TempusDominusBootstrap4 = function ($) {
         }
         $selector = $(selector);
         if ($selector.length === 0) {
-            return $selector;
+            if ($element.data(DateTimePicker.DATA_KEY)) {
+                $selector = $element;
+            } else {
+                return $selector;
+            }
         }
 
         if (!$selector.data(DateTimePicker.DATA_KEY)) {
@@ -2212,7 +2216,11 @@ var TempusDominusBootstrap4 = function ($) {
                 endDecadeYear = startDecade.year() + 11;
                 minDateDecade = this._options.minDate && this._options.minDate.isAfter(startDecade, 'y') && this._options.minDate.year() <= endDecadeYear;
                 maxDateDecade = this._options.maxDate && this._options.maxDate.isAfter(startDecade, 'y') && this._options.maxDate.year() <= endDecadeYear;
-                html += '<span data-action="selectDecade" class="decade' + (this._getLastPickedDate().isAfter(startDecade) && this._getLastPickedDate().year() <= endDecadeYear ? ' active' : '') + (!this._isValid(startDecade, 'y') && !minDateDecade && !maxDateDecade ? ' disabled' : '') + '" data-selection="' + (startDecade.year() + 6) + '">' + startDecade.year() + '</span>';
+                if (/0$/.test(this._getLastPickedDate().year())) {
+                    html += '<span data-action="selectDecade" class="decade' + (this._getLastPickedDate().year() == startDecade.year() ? ' active' : '') + (!this._isValid(startDecade, 'y') && !minDateDecade && !maxDateDecade ? ' disabled' : '') + '" data-selection="' + (startDecade.year() + 6) + '">' + startDecade.year() + '</span>';
+                } else {
+                    html += '<span data-action="selectDecade" class="decade' + (this._getLastPickedDate().isAfter(startDecade) && this._getLastPickedDate().year() < endDecadeYear ? ' active' : '') + (!this._isValid(startDecade, 'y') && !minDateDecade && !maxDateDecade ? ' disabled' : '') + '" data-selection="' + (startDecade.year() + 6) + '">' + startDecade.year() + '</span>';
+                }
                 startDecade.add(10, 'y');
             }
             html += '<span data-action="selectDecade" class="decade old" data-selection="' + (startDecade.year() + 6) + '">' + startDecade.year() + '</span>';
