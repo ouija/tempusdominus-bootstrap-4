@@ -23,6 +23,8 @@ Changelog:
 
 * Added [fix](https://github.com/ouija/tempusdominus-bootstrap-4/commit/9215a556058fb45a9108d0264ce57c1f8a2201df) for [Issue #221](https://github.com/tempusdominus/bootstrap-4/issues/221) *(viewDate reset on hide when no selection is made)*
 
-* Added fix for *active class to be applied to current, singular decade (when viewing date by decade)*
+* Added [fix](https://github.com/ouija/tempusdominus-bootstrap-4/commit/51f0b2872f6785b0d29da9d16b45c87f37b6417d) for *active class to be applied to current, singular decade (when viewing date by decade)*
+
+* Added fix for *screen reader 'blank' readout issue (by setting 'application' role attribute on targeted field)*
 
 * Improved default keyBind methods - Added shift+arrow keys support, backspace to clear, space to select, and more.
