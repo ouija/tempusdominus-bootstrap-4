@@ -6,7 +6,7 @@ This fork contains bugfixes and patches that haven't yet been merged into the [o
 
 Please consider [donating](https://paypal.me/djouija) to support this project. Thanks!
 
-For further improved accessibility support, use [this branch](https://github.com/ouija/tempusdominus-bootstrap-4/tree/accessibility-fix)
+**For further improved accessibility support, use [this branch](https://github.com/ouija/tempusdominus-bootstrap-4/tree/accessibility-fix)**
 
 Use either the minified or non-minified versions of both the css and js files found under the [build](https://github.com/ouija/tempusdominus-bootstrap-4/tree/master/build) folder.
 
