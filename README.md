@@ -25,6 +25,6 @@ Changelog:
 
 * Added [fix](https://github.com/ouija/tempusdominus-bootstrap-4/commit/51f0b2872f6785b0d29da9d16b45c87f37b6417d) for *active class to be applied to current, singular decade (when viewing date by decade)*
 
-* Added fix for *screen reader 'blank' readout issue (by setting 'application' role attribute on targeted field)*
+* Added [fix](https://github.com/ouija/tempusdominus-bootstrap-4/commit/de973d55ef5eb45f7b793821c866491574a457f0) for *screen reader 'blank' readout issue (by setting 'application' role attribute on targeted field)*
 
 * Improved default keyBind methods - Added shift+arrow keys support, backspace to clear, space to select, and more.
