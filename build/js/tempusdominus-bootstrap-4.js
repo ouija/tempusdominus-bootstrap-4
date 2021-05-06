@@ -550,6 +550,9 @@ var DateTimePicker = function ($, moment) {
                 }
             }
 
+            // set type attribute on field as application (fixes 'blank' readout with screenreaders)
+            this._element.attr('role','application');
+
             this._dates = [];
             this._dates[0] = this.getMoment();
             this._viewDate = this.getMoment().clone();
